@@ -63,7 +63,7 @@ namespace StackEverythingRedux.Patches
             {
                 if (Game1.didPlayerJustClickAtAll(ignoreNonMouseHeldInput: true))
                 {
-                    Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:Object.cs.13053"));
+                    Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:Object.cs.13053"), true);
                 }
             }
             else if (item is Furniture furniture && Game1.didPlayerJustLeftClick(ignoreNonMouseHeldInput: true))
@@ -71,16 +71,16 @@ namespace StackEverythingRedux.Patches
                 switch (furniture.GetAdditionalFurniturePlacementStatus(location, x, y, Game1.player))
                 {
                     case 1:
-                        Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:Furniture.cs.12629"));
+                        Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:Furniture.cs.12629"), true);
                         break;
                     case 2:
-                        Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:Furniture.cs.12632"));
+                        Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:Furniture.cs.12632"), true);
                         break;
                     case 3:
-                        Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:Furniture.cs.12633"));
+                        Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:Furniture.cs.12633"), true);
                         break;
                     case 4:
-                        Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:Furniture.cs.12632"));
+                        Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:Furniture.cs.12632"), true);
                         break;
                 }
             }
@@ -93,13 +93,13 @@ namespace StackEverythingRedux.Patches
                     case HoeDirtFertilizerApplyStatus.HasAnotherFertilizer:
                         if (Game1.didPlayerJustClickAtAll(ignoreNonMouseHeldInput: true))
                         {
-                            Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:HoeDirt.cs.13916-2"));
+                            Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:HoeDirt.cs.13916-2"), true);
                         }
                         return false;
                     case HoeDirtFertilizerApplyStatus.CropAlreadySprouted:
                         if (Game1.didPlayerJustClickAtAll(ignoreNonMouseHeldInput: true))
                         {
-                            Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:HoeDirt.cs.13916"));
+                            Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:HoeDirt.cs.13916"), true);
                         }
                         return false;
                 }
